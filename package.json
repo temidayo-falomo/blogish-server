@@ -1,4 +1,5 @@
 {
+  "packageManager": "pnpm@7.5.1",
   "name": "backend",
   "version": "1.0.0",
   "description": "",
@@ -15,6 +16,12 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.4.6",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "packageManager": "pnpm@7.5.1"
+  },
+  "pkg": {
+    "options": [
+      "experimental-modules"
+    ]
   }
 }
