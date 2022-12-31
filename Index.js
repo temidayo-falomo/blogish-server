@@ -1,8 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
-import router from "./routes/blog-routes";
 import cors from "cors";
 import dotenv from "dotenv";
+import router from "./routes/blog-routes.js";
 
 dotenv.config();
 
@@ -17,7 +17,7 @@ mongoose
     "mongodb+srv://temidayo:x5dPc2tY1MCu3N5W@blogs-cluster.3vjq7.mongodb.net/blogish-proj?retryWrites=true&w=majority"
   )
   .then(() => {
-    app.listen(process.env.PORT || 5600);
+    app.listen(process.env.PORT || 5800);
   })
   .then(() => {
     console.log("Connected To Database.....");

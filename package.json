@@ -1,13 +1,11 @@
 {
-  "packageManager": "pnpm@7.5.1",
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "Index.js",
   "scripts": {
-    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node Index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel Index.js -d dist",
+    "start": "npm run build && node dist/Index.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +16,9 @@
     "mongoose": "^6.4.6",
     "nodemon": "^2.0.19"
   },
-  "pkg": {
-    "options": [
-      "experimental-modules"
-    ]
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
   }
 }
